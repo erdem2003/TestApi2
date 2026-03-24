@@ -7,6 +7,10 @@ app = FastAPI()
 def home():
     return {"message": "API çalışıyor 🚀"}
 
+@app.get("/yeni")
+def home():
+    return {"message": "Pushla beni 🚀"}
+
 # Parametreli endpoint
 @app.get("/user/{user_id}")
 def get_user(user_id: int):
